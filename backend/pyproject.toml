@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "proxman"
+version = "0.1.0"
+description = "Create custom proxmox VMs for guacamole"
+authors = ["Sreejith IV"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.112.0"
+uvicorn = "^0.30.5"
+python-ldap = "^3.4.4"
+python-dotenv = "^1.0.1"
+python-multipart = "^0.0.9"
+pyjwt = "^2.9.0"
+sqlmodel = "^0.0.21"
+requests = "^2.32.3"
+pydantic-settings = "^2.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
