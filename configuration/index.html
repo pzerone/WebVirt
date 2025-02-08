@@ -1,0 +1,770 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.trclab.icfoss.org/configuration/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../management/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Configuration - Training center</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Training center" class="md-header__button md-logo" aria-label="Training center" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Training center
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Training center" class="md-nav__button md-logo" aria-label="Training center" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Training center
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-wake-on-lan-for-vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Wake On LAN for VMs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Wake On LAN for VMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systemd service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Virtual Machines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposing-vnc-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposing VNC Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-vms-to-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding VMs to LDAP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrapping Up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quirks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quirks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-wake-on-lan-for-vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Wake On LAN for VMs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Wake On LAN for VMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemd-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systemd service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Virtual Machines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposing-vnc-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposing VNC Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-vms-to-ldap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding VMs to LDAP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrapping Up
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Configuration</h1>
+
+<h2 id="recap">Recap</h2>
+<p>We have set up Proxmox on a server, configured LDAP on a virtual machine, installed LTSP on a separate machine, and deployed Apache Guacamole as Docker containers on a virtual machine.</p>
+<h2 id="setting-up-wake-on-lan-for-vms">Setting Up Wake On LAN for VMs</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The following scripts and commands are to be run on the Proxmox server.</p>
+</div>
+<p>Once our platform is deployed and users begin utilizing the virtual machines, a challenge arises when a user shuts down a VM. They won't have the ability to start it back up on their own. Fortunately, Apache Guacamole allows us to send Wake-On-LAN (WOL) packets to power on the VM before attempting a connection. However, since we're working with virtual machines instead of physical ones, the network interface card (NIC) isn't actively listening for WOL packets once the VM is shut down. To resolve this, we'll configure the Proxmox server to listen for WOL packets and start the appropriate VM based on the packet's target MAC address.</p>
+<p>The following Script was sourced from proxmox forums with slight modifications. (credit goes to <a href="https://forum.proxmox.com/members/epiclper.161512/">EpicLPer</a>)
+Original forum post <a href="https://forum.proxmox.com/threads/wake-on-lan-wol-for-vms-and-containers.143879/">link</a>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nv">IFACENAME</span><span class="o">=</span><span class="s2">&quot;vmbr1&quot;</span>
+
+<span class="k">while</span><span class="w"> </span>true<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>sleep<span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="nv">wake_mac</span><span class="o">=</span><span class="k">$(</span>tcpdump<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>-UlnXi<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$IFACENAME</span><span class="s2">&quot;</span><span class="w"> </span>ether<span class="w"> </span>proto<span class="w"> </span>0x0842<span class="w"> </span>or<span class="w"> </span>udp<span class="w"> </span>port<span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="se">\</span>
+<span class="w">  </span>sed<span class="w"> </span>-nE<span class="w"> </span><span class="s1">&#39;s/^.*20:  (ffff|.... ....) (..)(..) (..)(..) (..)(..).*$/\2:\3:\4:\5:\6:\7/p&#39;</span><span class="k">)</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Captured magic packet for address: \&quot;</span><span class="si">${</span><span class="nv">wake_mac</span><span class="si">}</span><span class="s2">\&quot;&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;Looking for existing VM: &quot;</span>
+<span class="w">  </span><span class="nv">matches</span><span class="o">=(</span><span class="k">$(</span>grep<span class="w"> </span>-il<span class="w"> </span><span class="si">${</span><span class="nv">wake_mac</span><span class="si">}</span><span class="w"> </span>/etc/pve/qemu-server/*<span class="k">)</span><span class="o">)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="s2"> found&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;Looking for existing LXC: &quot;</span>
+<span class="w">  </span><span class="nv">matches</span><span class="o">=(</span><span class="k">$(</span>grep<span class="w"> </span>-il<span class="w"> </span><span class="si">${</span><span class="nv">wake_mac</span><span class="si">}</span><span class="w"> </span>/etc/pve/lxc/*<span class="k">)</span><span class="o">)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="s2"> found&quot;</span>
+<span class="w">    </span><span class="k">continue</span>
+<span class="w">  </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="s2"> found, using first found&quot;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="s2"> found&quot;</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">  </span><span class="nv">vm_file</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="si">${</span><span class="nv">matches</span><span class="p">[0]</span><span class="si">}</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">vm_id</span><span class="o">=</span><span class="si">${</span><span class="nv">vm_file</span><span class="p">%.*</span><span class="si">}</span>
+<span class="w">  </span><span class="nv">details</span><span class="o">=</span><span class="k">$(</span>pct<span class="w"> </span>status<span class="w"> </span><span class="si">${</span><span class="nv">vm_id</span><span class="si">}</span><span class="w"> </span>-verbose<span class="w"> </span><span class="p">|</span><span class="w"> </span>egrep<span class="w"> </span><span class="s2">&quot;^name|^status&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">name</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">details</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">status</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">details</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $4}&#39;</span><span class="k">)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="s2">&quot;stopped&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SKIPPED CONTAINER </span><span class="si">${</span><span class="nv">vm_id</span><span class="si">}</span><span class="s2"> : </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2"> is </span><span class="si">${</span><span class="nv">status</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;STARTING CONTAINER </span><span class="si">${</span><span class="nv">vm_id</span><span class="si">}</span><span class="s2"> : </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2"> is </span><span class="si">${</span><span class="nv">status</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span>pct<span class="w"> </span>start<span class="w"> </span><span class="si">${</span><span class="nv">vm_id</span><span class="si">}</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">continue</span>
+<span class="w">  </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="w"> </span>-gt<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="s2"> found, using first found&quot;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">matches</span><span class="p">[*]</span><span class="si">}</span><span class="s2"> found&quot;</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">  </span><span class="nv">vm_file</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="si">${</span><span class="nv">matches</span><span class="p">[0]</span><span class="si">}</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">vm_id</span><span class="o">=</span><span class="si">${</span><span class="nv">vm_file</span><span class="p">%.*</span><span class="si">}</span>
+<span class="w">  </span><span class="nv">details</span><span class="o">=</span><span class="k">$(</span>qm<span class="w"> </span>status<span class="w"> </span><span class="si">${</span><span class="nv">vm_id</span><span class="si">}</span><span class="w"> </span>-verbose<span class="w"> </span><span class="p">|</span><span class="w"> </span>egrep<span class="w"> </span><span class="s2">&quot;^name|^status&quot;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">name</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">details</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span>
+<span class="w">  </span><span class="nv">status</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">details</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $4}&#39;</span><span class="k">)</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="s2">&quot;stopped&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SKIPPED VM </span><span class="si">${</span><span class="nv">vm_id</span><span class="si">}</span><span class="s2"> : </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2"> is </span><span class="si">${</span><span class="nv">status</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;STARTING VM </span><span class="si">${</span><span class="nv">vm_id</span><span class="si">}</span><span class="s2"> : </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2"> is </span><span class="si">${</span><span class="nv">status</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span>qm<span class="w"> </span>start<span class="w"> </span><span class="si">${</span><span class="nv">vm_id</span><span class="si">}</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+</code></pre></div></p>
+<p>Replace <code>IFACENAME</code> with the name of the network interface that Proxmox will be listening on. To test this setup, save the file on the proxmox server and execute it manually (it will eventually be set up as a systemd service, but for now, we'll leave it as is). </p>
+<p>Next, create a new virtual machine or use an existing one, power it off, and retrieve its MAC address from the Proxmox web UI. Then, from <strong>another machine</strong> with <code>wol</code> installed, run the following command to send a Wake-On-LAN (WOL) packet:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># Replace with the target MAC address</span>
+wol<span class="w"> </span>--port<span class="w"> </span><span class="m">9</span><span class="w"> </span>AA:BB:CC:DD:EE:FF
+</code></pre></div>
+If the VM powers on, your setup is successful. If not, ensure that the machine sending the WOL packet can reach the Proxmox server and verify that no firewalls are blocking port 9 between them.</p>
+<h4 id="systemd-service">Systemd service</h4>
+<p>Now that the script is working like indented, we can set it up as a systemd service to ensure it runs on boot and restarts if it crashes. Create a new service file with the following content:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Wake-on-LAN for Proxmox Virtual Environments</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+<span class="na">User</span><span class="o">=</span><span class="s">root</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/scripts/wol-vms.sh</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</code></pre></div>
+Make sure to place the script in the correct directory on the proxmox server and update the <code>ExecStart</code> path accordingly. Save the file as <code>wol-vms.service</code> in <code>/etc/systemd/system/</code> and run the following commands to enable and start the service:</p>
+<p><div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>wol-vms
+</code></pre></div>
+Now lets move on to creating some VMs for our users to access.</p>
+<h2 id="creating-virtual-machines">Creating Virtual Machines</h2>
+<p>We will create a few virtual machines for our users to access. run the following command on the proxmox server to create 5 virtual machines:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>qm<span class="w"> </span>create<span class="w"> </span><span class="m">200</span><span class="nv">$i</span><span class="w"> </span>--name<span class="w"> </span>VM-200<span class="nv">$i</span><span class="w"> </span>--cpu<span class="w"> </span>x86-64-v2-AES<span class="w"> </span>--cores<span class="w"> </span><span class="m">2</span><span class="w"> </span>--sockets<span class="w"> </span><span class="m">1</span><span class="w"> </span>--memory<span class="w"> </span><span class="m">4096</span><span class="w"> </span>--net0<span class="w"> </span>virtio,bridge<span class="o">=</span>vmbr1,firewall<span class="o">=</span><span class="m">1</span><span class="w"> </span>--ostype<span class="w"> </span>l26<span class="w"> </span>--scsihw<span class="w"> </span>virtio-scsi-single<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</code></pre></div>
+This command will create 5 virtual machines with 2 cores, 4GB of RAM, and a single network interface connected to <code>vmbr1</code>. The VMs will be named <code>VM-2001</code>, <code>VM-2002</code>, <code>VM-2003</code>, <code>VM-2004</code>, and <code>VM-2005</code>. Feel free to adjust the resources and names as needed. You can find more info on the qm command <a href="https://pve.proxmox.com/pve-docs/qm.1.html">here</a>.</p>
+<p>We now have 2 more steps to complete before our platform is ready for users to access. We need to expose the VNC output from proxmox, so that guacamole can connect to it and we need to add the VMs to LDAP and associate them with users. Let's start with the first step.</p>
+<h2 id="exposing-vnc-output">Exposing VNC Output</h2>
+<p>By default, Proxmox does not expose the VNC output of virtual machines. To enable this, we need to add a few lines to the VM configuration file. Run the following command to add the necessary lines to the configuration files:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;args: -vnc 192.168.111.123:</span><span class="k">$((</span><span class="nv">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">77</span><span class="k">))</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/pve/qemu-server/200<span class="nv">$i</span>.conf<span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</code></pre></div>
+This command will add the <code>-vnc</code> argument to the VM configuration files, exposing the VNC output on the IP address of the Proxmox server and port <code>5900+xx</code>, where <code>xx</code> is the VM number added to 77. For example, <code>VM-2001</code> will be exposed on <code>192.168.111.123:5978</code>. There is a dedicated wiki page on the Proxmox website that explains the VNC options in more detail <a href="https://pve.proxmox.com/wiki/VNC_Client_Access">here</a>.</p>
+<p>Make sure to replace the IP address with the one that your Proxmox server is using. Now that the VNC output is exposed, we can move on to the final step.</p>
+<h2 id="adding-vms-to-ldap">Adding VMs to LDAP</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The following scripts and commands are to be run on the LDAP server.</p>
+</div>
+<p>To allow users to access the VMs, we need to add them to LDAP and associate them with the users. We will use the <code>ldapadd</code> command to add the VMs to LDAP. Create a new file called <code>vms.ldif</code> on the LDAP server with the following content:</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># VM 1</span>
+<span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">cn</span><span class="o">=</span><span class="s">VM 1</span><span class="p">,</span><span class="na">ou</span><span class="o">=</span><span class="s">groups</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">example</span><span class="p">,</span><span class="na">dc</span><span class="o">=</span><span class="s">com</span>
+<span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">guacConfigGroup</span>
+<span class="na">objectClass</span><span class="p">:</span><span class="w"> </span><span class="s">groupOfNames</span>
+<span class="na">guacConfigProtocol</span><span class="p">:</span><span class="w"> </span><span class="s">vnc</span>
+
+<span class="na">guacConfigParameter</span><span class="p">:</span><span class="w"> </span><span class="s">hostname=192.168.111.123 # Replace with the IP address of the Proxmox server where VNCs are exposed</span>
+<span class="na">guacConfigParameter</span><span class="p">:</span><span class="w"> </span><span class="s">port=5978 # Replace with the port number of the VNC output</span>
+<span class="na">guacConfigParameter</span><span class="p">:</span><span class="w"> </span><span class="s">wol-send-packet=true</span>
+<span class="na">guacConfigParameter</span><span class="p">:</span><span class="w"> </span><span class="s">wol-mac-addr=AA:BB:CC:DD:EE:FF # Replace with the MAC address of the VM</span>
+<span class="na">guacConfigParameter</span><span class="p">:</span><span class="w"> </span><span class="s">wol-broadcast-addr=192.168.111.123 # Replace with the proxmox server IP where our wol-vms script is listening</span>
+<span class="na">guacConfigParameter</span><span class="p">:</span><span class="w"> </span><span class="s">wol-udp-port=9</span>
+<span class="na">guacConfigParameter</span><span class="p">:</span><span class="w"> </span><span class="s">wol-wait-time=5 # Time to wait for the VM to start before connecting</span>
+<span class="na">member</span><span class="p">:</span><span class="w"> </span><span class="s">uid=ldapadmin,ou=people,dc=example,dc=com # Replace with the user that should have access to the VM. You can add multiple users by repeating this line</span>
+</code></pre></div>
+Replace the values in the <code>vms.ldif</code> file with the appropriate values for your setup. Duplicate the entry for each VM you created, changing the <code>cn=</code>, <code>port=</code>, <code>wol-mac-addr=</code> and <code>member=</code> values accordingly. Once the file is ready, run the following command to add the VMs to LDAP:</p>
+<p><div class="highlight"><pre><span></span><code>ldapadd<span class="w"> </span>-x<span class="w"> </span>-D<span class="w"> </span><span class="nv">cn</span><span class="o">=</span>admin,dc<span class="o">=</span>example,dc<span class="o">=</span>com<span class="w"> </span>-W<span class="w"> </span>-f<span class="w"> </span>vms.ldif
+</code></pre></div>
+You will be prompted to enter the LDAP admin password. You can verify that the VMs were added successfully by running the following command:</p>
+<p><div class="highlight"><pre><span></span><code>ldapsearch<span class="w"> </span>-x<span class="w"> </span>-LLL<span class="w"> </span>-b<span class="w"> </span><span class="nv">ou</span><span class="o">=</span>groups,dc<span class="o">=</span>example,dc<span class="o">=</span>com
+</code></pre></div>
+This command will list all the groups in the <code>ou=groups,dc=example,dc=com</code> branch. You should see the VMs listed with the appropriate configuration. If everything looks good, you can now access the VMs using Apache Guacamole.</p>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>We have successfully set up Wake-On-LAN for VMs on the Proxmox server, created virtual machines for users to access, exposed the VNC output, and added the VMs to LDAP. Users can now access the VMs using Apache Guacamole. Spin up a browser and navigate to the Guacamole web interface to test the connection. If everything is working as expected, you have successfully set up a remote desktop platform using Proxmox, LDAP, LTSP, and Apache Guacamole. Congratulations!.</p>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li><a href="../management/">Creating and managing LTSP Images</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
