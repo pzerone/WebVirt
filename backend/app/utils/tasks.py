@@ -55,10 +55,15 @@ async def bulk_create(
     session = next(get_session())
     for user in users:
         vm = VirtualMachine(
-            name=f"{user[2]}-vm", core_count=core_count, memory=memory, duration=duration
+            name=f"{user[2]}-vm",
+            core_count=core_count,
+            memory=memory,
+            duration=duration,
         )
         try:
-            create_user(user[0], user[1], user[2], generate_unique_uid(), user[3], prefix)
+            create_user(
+                user[0], user[1], user[2], generate_unique_uid(), user[3], prefix
+            )
             id = new_free_id()
             create_vm(id=id, name=vm.name, core_count=vm.core_count, memory=vm.memory)
             port = new_free_port()
@@ -76,8 +81,12 @@ async def bulk_create(
             memory=vm.memory,
             port=port,
             owner=user[2],
-            expiry=datetime.datetime.now(datetime.UTC)
-            + datetime.timedelta(minutes=vm.duration),
+            expiry=(
+                datetime.datetime.now(datetime.UTC)
+                + datetime.timedelta(hours=vm.duration)
+                if vm.duration > 0
+                else datetime.datetime.max
+            ),
         )
         session.add(vm_db_entry)
     session.commit()

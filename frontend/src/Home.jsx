@@ -5,16 +5,22 @@ const Modal = ({ isOpen, onClose, data }) => {
   if (!isOpen) return null;
 
   const handleDownload = () => {
+    const currentDate = new Date().toISOString().split("T")[0]; // Format: YYYY-MM-DD
+    const filename = `response-${currentDate}.csv`;
+  
     const csvContent = "data:text/csv;charset=utf-8," + 
       data.map(row => row.join(",")).join("\n");
     const encodedUri = encodeURI(csvContent);
+  
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "response.csv");
+    link.setAttribute("download", filename);
+  
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+  ;
 
   const rowsToDisplay = data ? data.slice(1) : []; // Exclude the header row
 
@@ -51,7 +57,7 @@ const Modal = ({ isOpen, onClose, data }) => {
 };
 
 const Home = () => {
-  baseUrl = import.meta.env.VITE_API_URL;
+  const baseUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
   const [csvData, setCsvData] = useState([]);
   const [error, setError] = useState('');
@@ -89,15 +95,15 @@ const Home = () => {
 
   const handleUpload = async () => {
     if (!coreCount || coreCount < 1) {
-      setError('Core count must be >= 1.');
+      setError('Core count must be greater than or equal to 1.');
       return;
     }
     if (!memory || memory < 512) {
-      setError('Memory must be >= 512 MB.');
+      setError('Memory must be greater than or equal to 512 MB.');
       return;
     }
-    if (!duration || duration < 60) {
-      setError('Duration must be >= 60 minutes.');
+    if (!duration || duration < 0) {
+      setError('Duration must be greater than  or equal to 0 hours.');
       return;
     }
     if (!prefix || !/^\/.*[^\/]$/.test(prefix)) {
@@ -180,6 +186,7 @@ const Home = () => {
               style={styles.textField}
               required
             />
+            <p style={styles.description}>Use 0 to disable duration based expiry.</p>
             <input 
               type="text" 
               placeholder="home directory path" 
@@ -188,7 +195,7 @@ const Home = () => {
               style={styles.textField}
               required
             />
-            <p style={styles.description}>Enter where to create the user's home directory.</p>
+            <p style={styles.description}>Enter where to create the user's home directory. Example: /mnt/ldapusers</p>
           </div>
           
           <button style={styles.uploadButton} onClick={handleUpload}>

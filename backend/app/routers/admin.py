@@ -87,7 +87,7 @@ async def process_csv(
     entries = [
         ["first_name", "last_name", "username", "password"]
     ]  # Update the header with username and password columns
-    entries.extend([entry for entry in reader])
+    entries.extend([entry for entry in reader if any(field.strip() for field in entry)])
     if len(entries) < 2:
         raise HTTPException(
             status.HTTP_400_BAD_REQUEST, "Empty or corrupted csv file. Check contents."

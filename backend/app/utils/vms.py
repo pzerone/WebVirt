@@ -28,7 +28,7 @@ def validate_specs(vm: VirtualMachine) -> bool:
         return False
     if not vm.core_count > 0:
         return False
-    if not vm.duration >= 60:
+    if not vm.duration >= 0 and vm.duration <= 9999999999: # safe upper limit for mathematical operations on datetime objects
         return False
     if not len(vm.name) <= 50:
         return False
@@ -191,7 +191,6 @@ def new_free_id() -> int:
     """
     existing_vms = os.listdir(settings.proxmox_vm_config_dir)
     existing_vms = sorted(list(map(lambda vm: int(vm.split(".")[0]), existing_vms)))
-    print(existing_vms)
     if len(existing_vms) == 0:
         return 100  # No VMs created yet, highly unlikely but hey.
     if (
@@ -202,24 +201,6 @@ def new_free_id() -> int:
         if existing_vms[i] + 1 != existing_vms[i + 1]:
             return existing_vms[i] + 1
     return existing_vms[-1] + 1
-
-
-# def new_free_port() -> int:
-#     session = Session(engine)
-#     statement = select(DBVirtualMachine.port)
-#     occupied_ports = [port for port in session.exec(statement)].sort()
-#
-#     if len(occupied_ports) == 0:
-#         return 77  # Default recommended starting port
-#
-#     if len(occupied_ports) == 1:
-#         return occupied_ports[0] + 1
-#
-#     for i in range(len(occupied_ports) - 1):
-#         if occupied_ports[i + 1] != occupied_ports[i] + 1:
-#             return occupied_ports[i] + 1
-#     return occupied_ports[-1] + 1
-#
 
 
 def new_free_port() -> int:
