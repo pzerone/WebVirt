@@ -40,3 +40,29 @@ sudo systemctl enable --now nslcd.service
 ```
 ### Username prompt on login
 Since all users exists on the LDAP server, GDM will not show the list of users on the login screen and the user should click on the "Not listed?" button to enter the username manually. This can be annoying for users who are not aware of this. To disable user list and show username prompt on login, you'll have to edit `/etc/gdm3/greeter.dconf-defaults` to uncomment the `disable-user-list=true` line.
+
+### Using local disk instead of LTSP image
+
+If you want to use a local disk instead of the VMs booting off of the LTSP server, you can do by attaching a disk of required size into every VM and changing the boot order. Doing this manually is time consuming, so you may use the following commands to automate the process:
+
+#### Attaching disks
+```bash
+for i in {1..10}; do qm set $i --scsi1 <storage_name>:<disk_size>; done
+# To attach a disk of size 32GB from a ZFS pool called Tank to VMs 1 to 10 as scsi1, use the following command:
+# for i in {1..10}; do qm set $i --scsi1 Tank:32; done
+```
+#### Mounting ISOs
+
+```bash
+for i in {1..10}; do qm set $i --ide0 <iso_path>; done
+# To mount an ISO located at /zfsimages/templates/iso/ubuntu.iso to VMs 1 to 10 as ide0, use the following command:
+# for i in {1..10}; do qm set $i --ide0 /zfsimages/templates/iso/ubuntu.iso; done
+```
+#### Setting boot order
+
+You need to change the boot order of the VM to boot off of the ISO if you are planning to install an OS on it. By default, all the VMs created using the wizard will boot off of the LTSP server.
+```bash
+for i in {1..10}; do qm set $i --boot 'order=scsi0;ide0'; done
+# To set the boot order to scsi0 and ide0 for VMs 1 to 10, use the following command:
+# for i in {1..10}; do qm set $i --boot 'order=scsi0;ide0'; done
+```

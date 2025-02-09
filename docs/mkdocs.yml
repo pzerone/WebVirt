@@ -1,5 +1,5 @@
-site_name: Training center
-site_url: https://docs.trclab.icfoss.org
+site_name: WebVirt
+site_url: https://webvirt.sreejithiv.live
 theme:
   features:
     - content.code.copy
@@ -40,4 +40,5 @@ nav:
   - Installation: installation.md
   - Configuration: configuration.md
   - Management: management.md
+  - Usage: usage.md
   - Quirks: quirks.md

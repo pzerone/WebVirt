@@ -150,7 +150,7 @@ const Home = () => {
       <button onClick={handleLogout} style={styles.logoutButton}>
         Logout
       </button>
-      <h2>Course VM Creator</h2>
+      <h2>WebVirt Wizard</h2>
       <div style={styles.content}>
         <div style={styles.configContainer}>
           <input 
@@ -180,7 +180,7 @@ const Home = () => {
             />
             <input 
               type="number" 
-              placeholder="Duration (minutes)" 
+              placeholder="Duration (hours)" 
               value={duration}
               onChange={(e) => setDuration(e.target.value)}
               style={styles.textField}
