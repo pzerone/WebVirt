@@ -34,7 +34,7 @@ Now run the following command to start the backend:
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
-This will start the backend FastAPI server on port `8000`. Check if the backend is running by going to [http://<proxmox_ip>:8000/ping](http://<proxmox_ip>:8000/ping). You should see a response like this:
+This will start the backend FastAPI server on port `8000`. Check if the backend is running by going to [http://proxmox_ip:8000/ping](http://<proxmox_ip>:8000/ping). You should see a response like this:
 
 ```json
 {"ping":"pong"}
