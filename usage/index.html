@@ -8,11 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://webvirt.sreejithiv.live/quirks/">
+        <link rel="canonical" href="https://webvirt.sreejithiv.live/usage/">
       
       
-        <link rel="prev" href="../usage/">
+        <link rel="prev" href="../management/">
       
+      
+        <link rel="next" href="../quirks/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>Quirks - WebVirt</title>
+        <title>Usage - WebVirt</title>
       
     
     
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#disable-auto-suspend" class="md-skip">
+        <a href="#installing-management-webapp" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quirks
+              Usage
             
           </span>
         </div>
@@ -334,26 +336,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../usage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Usage
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -368,7 +350,7 @@
           
   
   <span class="md-ellipsis">
-    Quirks
+    Usage
   </span>
   
 
@@ -379,7 +361,7 @@
         
   
   <span class="md-ellipsis">
-    Quirks
+    Usage
   </span>
   
 
@@ -399,64 +381,61 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#disable-auto-suspend" class="md-nav__link">
+  <a href="#installing-management-webapp" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Auto suspend
+      Installing Management Webapp
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kali-linux-does-not-authenticate-ldap-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kali Linux does not authenticate LDAP users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#username-prompt-on-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      Username prompt on login
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-local-disk-instead-of-ltsp-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using local disk instead of LTSP image
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using local disk instead of LTSP image">
+    <nav class="md-nav" aria-label="Installing Management Webapp">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attaching-disks" class="md-nav__link">
+  <a href="#backend-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Attaching disks
+      Backend setup
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mounting-isos" class="md-nav__link">
+  <a href="#frontend-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Mounting ISOs
+      Frontend setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frontend setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-the-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building the frontend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating virtual machines.
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-boot-order" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting boot order
+      Next Steps
     </span>
   </a>
   
@@ -471,6 +450,26 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quirks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quirks
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -500,64 +499,61 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#disable-auto-suspend" class="md-nav__link">
+  <a href="#installing-management-webapp" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable Auto suspend
+      Installing Management Webapp
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kali-linux-does-not-authenticate-ldap-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kali Linux does not authenticate LDAP users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#username-prompt-on-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      Username prompt on login
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-local-disk-instead-of-ltsp-image" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using local disk instead of LTSP image
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using local disk instead of LTSP image">
+    <nav class="md-nav" aria-label="Installing Management Webapp">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attaching-disks" class="md-nav__link">
+  <a href="#backend-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Attaching disks
+      Backend setup
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mounting-isos" class="md-nav__link">
+  <a href="#frontend-setup" class="md-nav__link">
     <span class="md-ellipsis">
-      Mounting ISOs
+      Frontend setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frontend setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-the-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building the frontend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating virtual machines.
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-boot-order" class="md-nav__link">
+  <a href="#next-steps" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting boot order
+      Next Steps
     </span>
   </a>
   
@@ -583,65 +579,68 @@
                   
 
 
-  <h1>Quirks</h1>
+  <h1>Usage</h1>
 
-<p>This page contains some quirks that you may encounter while setting up the platform and how to work around them.</p>
+<p>Now that all of our services are up and running, we can setup our Backend and Frontend for creating virtual machines.</p>
+<h2 id="installing-management-webapp">Installing Management Webapp</h2>
+<p>Now that we have the LTSP server ready to use, we need to install the management web application. The application frontend is written in react and the backend is written using fastAPI. If you haven't already, clone the repository at <a href="https://github.com/pzerone/WebVirt">GitHub</a>.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pzerone/WebVirt
+</code></pre></div>
+<h3 id="backend-setup">Backend setup</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is mandatory that the backend is hosted on the proxmox server itself. This is so that the backend can access the proxmox configuration files directly and manipulate them.</p>
+</div>
+<p>We will copy just the backend to the proxmox server. The backend is written in python and uses FastAPI. We will use uvicorn to run the backend.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>WebVirt
+scp<span class="w"> </span>-r<span class="w"> </span>backend<span class="w"> </span>root@&lt;proxmox_ip&gt;:<span class="w">  </span><span class="c1"># Require SSH server inside proxox host</span>
+</code></pre></div>
+<p>Now on the proxmox host, run the following to install python3 venv and install the dependencies:</p>
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>python3-venv
+<span class="nb">cd</span><span class="w"> </span>backend
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.env
+<span class="nb">source</span><span class="w"> </span>.env/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+<p>Now run the following command to start the backend:</p>
+<p><div class="highlight"><pre><span></span><code>uvicorn<span class="w"> </span>main:app<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
+</code></pre></div>
+This will start the backend FastAPI server on port <code>8000</code>. Check if the backend is running by going to <a href="http://&lt;proxmox_ip&gt;:8000/ping">http://<proxmox_ip>:8000/ping</a>. You should see a response like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;ping&quot;</span><span class="p">:</span><span class="s2">&quot;pong&quot;</span><span class="p">}</span>
+</code></pre></div>
+<h3 id="frontend-setup">Frontend setup</h3>
+<p>Now that our backend is up, we can setup our frontend. You have the freedom to run the frontend anywhere you want. Just make sure it can access the backend.</p>
+<h4 id="building-the-frontend">Building the frontend</h4>
+<p>You need npm installed to build the frontend.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Any changes done to the LTSP images will require you to rebuild the image. This can be done by running the following commands:
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ltsp<span class="w"> </span>image<span class="w"> </span>&lt;image_name&gt;
-</code></pre></div></p>
+<p>Make sure to set the backend URL in the frontend <code>.env</code> file to <code>http://&lt;proxmox_ip&gt;:8000</code> before building</p>
 </div>
-<h3 id="disable-auto-suspend">Disable Auto suspend</h3>
-<p>By default in gnome the client image is set to suspend after 5 minutes of inactivity depending on the client distro defaults. This can be troublesome since it usually results in a frozen system and no way for user to restart it. To disable this system wide, you'll have to edit the following files
- <code>/etc/dconf/db/local.d/00-power</code>
-<div class="highlight"><pre><span></span><code><span class="c1"># Specify the dconf path</span>
-<span class="k">[org/gnome/settings-daemon/plugins/power]</span>
-
-<span class="c1"># Enable screen dimming</span>
-<span class="na">idle-dim</span><span class="o">=</span><span class="s">false</span>
-
-<span class="c1"># Set brightness after dimming</span>
-<span class="na">idle-brightness</span><span class="o">=</span><span class="s">30</span>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>WebVirt/frontend
+npm<span class="w"> </span>install
+npm<span class="w"> </span>run<span class="w"> </span>build
 </code></pre></div>
-<code>/etc/dconf/db/local.d/00-screensaver</code>
-<div class="highlight"><pre><span></span><code><span class="c1"># Specify the dconf path</span>
-<span class="k">[org/gnome/desktop/session]</span>
-
-<span class="c1"># Number of seconds of inactivity before the screen goes blank</span>
-<span class="c1"># Set to 0 seconds if you want to deactivate the screensaver.</span>
-<span class="na">idle-delay</span><span class="o">=</span><span class="s">uint32 0</span>
-
-<span class="c1"># Specify the dconf path</span>
-<span class="k">[org/gnome/desktop/screensaver]</span>
-
-<span class="c1"># Number of seconds after the screen is blank before locking the screen</span>
-<span class="na">lock-delay</span><span class="o">=</span><span class="s">uint32 0</span>
-</code></pre></div></p>
-<h3 id="kali-linux-does-not-authenticate-ldap-users">Kali Linux does not authenticate LDAP users</h3>
-<p>You may encounter an issue where Kali Linux clients are unable to authenticate LDAP users even after configuring LDAP on Kali VM in virtualbox. This is due to the fact that in Kali, the <code>nslcd.service</code> not enabled by default. To fix this, you'll have to manually enable the service after installing LDAP packages. Run the following command:
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>nslcd.service
-</code></pre></div></p>
-<h3 id="username-prompt-on-login">Username prompt on login</h3>
-<p>Since all users exists on the LDAP server, GDM will not show the list of users on the login screen and the user should click on the "Not listed?" button to enter the username manually. This can be annoying for users who are not aware of this. To disable user list and show username prompt on login, you'll have to edit <code>/etc/gdm3/greeter.dconf-defaults</code> to uncomment the <code>disable-user-list=true</code> line.</p>
-<h3 id="using-local-disk-instead-of-ltsp-image">Using local disk instead of LTSP image</h3>
-<p>If you want to use a local disk instead of the VMs booting off of the LTSP server, you can do by attaching a disk of required size into every VM and changing the boot order. Doing this manually is time consuming, so you may use the following commands to automate the process:</p>
-<h4 id="attaching-disks">Attaching disks</h4>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>qm<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>--scsi1<span class="w"> </span>&lt;storage_name&gt;:&lt;disk_size&gt;<span class="p">;</span><span class="w"> </span><span class="k">done</span>
-<span class="c1"># To attach a disk of size 32GB from a ZFS pool called Tank to VMs 1 to 10 as scsi1, use the following command:</span>
-<span class="c1"># for i in {1..10}; do qm set $i --scsi1 Tank:32; done</span>
-</code></pre></div>
-<h4 id="mounting-isos">Mounting ISOs</h4>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>qm<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>--ide0<span class="w"> </span>&lt;iso_path&gt;<span class="p">;</span><span class="w"> </span><span class="k">done</span>
-<span class="c1"># To mount an ISO located at /zfsimages/templates/iso/ubuntu.iso to VMs 1 to 10 as ide0, use the following command:</span>
-<span class="c1"># for i in {1..10}; do qm set $i --ide0 /zfsimages/templates/iso/ubuntu.iso; done</span>
-</code></pre></div>
-<h4 id="setting-boot-order">Setting boot order</h4>
-<p>You need to change the boot order of the VM to boot off of the ISO if you are planning to install an OS on it. By default, all the VMs created using the wizard will boot off of the LTSP server.
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>qm<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span>--boot<span class="w"> </span><span class="s1">&#39;order=scsi0;ide0&#39;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
-<span class="c1"># To set the boot order to scsi0 and ide0 for VMs 1 to 10, use the following command:</span>
-<span class="c1"># for i in {1..10}; do qm set $i --boot &#39;order=scsi0;ide0&#39;; done</span>
-</code></pre></div></p>
+<p>copy the dist folder and all its contents to a webserver like nginx or apache. The login screen should look like this:</p>
+<p><img alt="Login Screen" src="../assets/Screenshots/manager-login.png" /></p>
+<p>Try logging in as the LDAP admin user we created earlier and you should be greeted by the following page.</p>
+<p><img alt="Dashboard" src="../assets/Screenshots/manager-home-pre.png" /></p>
+<h3 id="creating-virtual-machines">Creating virtual machines.</h3>
+<p>Once we have the user list, we can use this web app to automatically create all the users and virtual machines for them in our proxmox server. To do this, get the user list in a csv file in the following format</p>
+<p><code>first_name, last_name</code></p>
+<p>Usernames and passwords are auto generated by the backend. Once the CSV file is ready, upload it through this page. It should give you a preview of the user list if the csv is in valid format.</p>
+<p><img alt="User List" src="../assets/Screenshots/manager-home-post.png" /></p>
+<p>Fill up the rest of the form and click upload. You will now see a response page with the created users with their username and password. You can download the file by clicking on the download button at the bottom.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The virtual machines and the users are being created in the background. It takes approximately 5 seconds per user to fully create the user and virtual machine. Do not attempt to login until the users are created. You can view the progress of the VMs being created in the proxmox web interface.</p>
+</div>
+<p>Share the login credentials from the response CSV file to the users via preferred means.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure you set the duration to be long enough for the users to complete the course. The Virtual machines will be auto deleted after this time expires.</p>
+</div>
+<h3 id="next-steps">Next Steps</h3>
+<p><a href="../quirks/">Quirks and workarounds</a></p>
 
 
 
