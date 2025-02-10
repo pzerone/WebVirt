@@ -30,3 +30,8 @@ If you encounter any issues related to the external dependencies of this project
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributors
+
+- Sreejith IV: [Email](mailto:mail2iv@proton.me), [GitHub](https://github.com/pzerone)
+- Sunil Thomas Thonikkuzhiyil: [Email](mailto:vu2swx@gmail.com), [GitHub](https://github.com/suniltt)
