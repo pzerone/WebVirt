@@ -19,8 +19,10 @@ cd WebVirt
 scp -r backend root@<proxmox_ip>:  # Require SSH server inside proxox host
 ```
 
-Now on the proxmox host, run the following to install python3 venv and install the dependencies:
+Now on the proxmox host, run the following to install `python3-venv` and install the dependencies:
 
+!!! Note
+    The backend is written with python 3.12. Make sure `python3 --version` returns a version greater than or equal to 3.12
 ```bash
 apt install python3-venv
 cd backend
@@ -28,11 +30,17 @@ python3 -m venv .env
 source .env/bin/activate
 pip install -r requirements.txt
 ```
+#### Setting up environment variables
+when you clone the repository, you will find a `.env.sample` file in the backend directory. Copy this file to `.env` and set all the mandatory variables. The env file is throughly commented to help you set the variables.
 
+!!! Warning
+    Without setting the environment variables, the backend will not run.
+
+#### Starting the backend
 Now run the following command to start the backend:
 
 ```bash
-uvicorn main:app --host 0.0.0.0 --port 8000
+uvicorn app.routers.main:app --host 0.0.0.0 --port 8000
 ```
 This will start the backend FastAPI server on port `8000`. Check if the backend is running by going to [http://proxmox_ip:8000/ping](http://<proxmox_ip>:8000/ping). You should see a response like this:
 
